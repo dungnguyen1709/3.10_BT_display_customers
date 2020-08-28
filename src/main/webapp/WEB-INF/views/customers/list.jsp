@@ -27,10 +27,14 @@
 
             <c:forEach items="${listCustomers}" var="customer">
                 <tr>
-                  <td><c:out value="${customer.getName()}"></c:out></td>  
-                    <td><c:out value="${customer.getDateOfBirth()}"></c:out></td>
-                    <td><c:out value="${customer.getAddress()}"></c:out></td>
-                    <td><c:out value="${customer.getImage()}"></c:out></td>
+<%--                  <td><c:out value="${customer.getName()}"></c:out></td>  --%>
+<%--                    <td><c:out value="${customer.getDateOfBirth()}"></c:out></td>--%>
+<%--                    <td><c:out value="${customer.getAddress()}"></c:out></td>--%>
+<%--                    <td><c:out value="${customer.getImage()}"></c:out></td>--%>
+                    <td>${customer.name}</td>
+                    <td>${customer.dateOfBirth}</td>
+                    <td>${customer.address}</td>
+    <td><img src="${customer.image}" alt="không có" width="150px" height="150px"></td>
                 </tr>
             </c:forEach>
         </table>
