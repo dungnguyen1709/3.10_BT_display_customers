@@ -12,19 +12,25 @@
 <head>
     <title>Title</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .container td {
+
+            vertical-align: middle;
+        }
+
+    </style>
 </head>
 <body>
+<h1 style="text-align: center">Danh sách khách hàng</h1>
 <div class="container">
-    <div class="table-responsive">
+    <table class="table-responsive">
         <table class="table table-hover">
-            <h1>Danh sách khách hàng</h1>
             <tr>
                 <th>Tên</th>
                 <th>Ngày Sinh</th>
                 <th>Địa Chỉ</th>
                 <th>Khung Ảnh</th>
             </tr>
-
             <c:forEach items="${listCustomers}" var="customer">
                 <tr>
 <%--                  <td><c:out value="${customer.getName()}"></c:out></td>  --%>
@@ -34,11 +40,11 @@
                     <td>${customer.name}</td>
                     <td>${customer.dateOfBirth}</td>
                     <td>${customer.address}</td>
-    <td><img src="${customer.image}" alt="không có" width="150px" height="150px"></td>
+    <td><img src="${customer.image}"  width="100px" height="100px"></td>
                 </tr>
             </c:forEach>
         </table>
-    </div>
+    </table>
 </div>
 
 </body>
